@@ -79,7 +79,7 @@ if erro == 0 %raíz encontrada
         fprintf('Juros: %.2f%%\n', raiz*100);
     elseif problema == 2
         L= 2*raiz*sinh(d/(2*raiz));
-        fprintf('Comprimento do cabo: %.2f',L);
+        fprintf('Comprimento do cabo: %.2f\n',L);
     end
 else %raíz não encontrada
     fprintf('O método não convergiu em %d iterações.\n', IterMax);
