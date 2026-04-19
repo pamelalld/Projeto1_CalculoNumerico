@@ -76,7 +76,7 @@ if erro == 0 %raíz encontrada
     fprintf('Número de iterações: %d\n', iteracoes);
 
     if problema == 1
-        fprintf('\nJuros: %.2f%%\n', raiz*100);
+        fprintf('Juros: %.2f%%\n', raiz*100);
     elseif problema == 2
         L= 2*raiz*sinh(d/(2*raiz));
         fprintf('Comprimento do cabo: %.2f',L);
