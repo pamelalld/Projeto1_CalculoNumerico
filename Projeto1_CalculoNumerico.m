@@ -4,7 +4,7 @@ function [Raiz, Iter, CondErro] = metodo_newton(f, df, x0, Toler, IterMax)
     DFx = df(x);
     Iter = 0;
 
-    fprintf('\nIter: %d, x: %.6f, DFx: %.6f, Fx: %.6f\n', Iter, x, DFx, Fx);
+    fprintf('\nIterações: %d, x: %.6f, DFx: %.6f, Fx: %.6f\n', Iter, x, DFx, Fx);
 
     while true
         DeltaX = -Fx / DFx;
@@ -14,7 +14,7 @@ function [Raiz, Iter, CondErro] = metodo_newton(f, df, x0, Toler, IterMax)
         DFx = df(x);
         Iter = Iter + 1;
         
-        fprintf('Iter: %d, x: %.6f, DFx: %.6f, Fx: %.6f, DeltaX: %.6f\n', ...
+        fprintf('Iterações: %d, x: %.6f, DFx: %.6f, Fx: %.6f, DeltaX: %.6f\n', ...
                 Iter, x, DFx, Fx, DeltaX);
         
         if (abs(DeltaX) <= Toler && abs(Fx) <= Toler) || DFx == 0 || Iter >= IterMax
